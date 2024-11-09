@@ -2,6 +2,12 @@ import asyncio
 
 
 class Utilities:
+
+    @staticmethod
+    async def printall(items):
+        for item in items:
+            print(f"- {item}")
+
     @staticmethod
     async def confirm_and_run(func, prompt, *args, **kwargs):
         """

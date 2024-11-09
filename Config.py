@@ -10,4 +10,5 @@ class Config:
             cls.QDRANT_API_KEY = os.getenv("QDRANT_API_KEY")
             cls.QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLLECTION_NAME")
             cls.OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+            cls.DISCORD_API_KEY = os.getenv("DISCORD_API_KEY")
         return cls._instance
