@@ -1,6 +1,6 @@
+from discord.ext.commands.parameters import empty
 from dotenv import load_dotenv
 import asyncio
-import re
 from itertools import chain
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse
@@ -11,6 +11,7 @@ from discord.ext import commands
 
 from Config import Config
 from PDFDownloader import PDFDownloader
+from Utilities import Utilities
 
 load_dotenv()
 
@@ -51,6 +52,10 @@ async def extract_librarylol(ctx, url: str = None):
 
 @bot.command()
 async def get_links(ctx, channel: discord.TextChannel = None):
+    import json
+    import re
+    import io
+
     if ctx.channel.id != BOT_TESTING_CHANNEL_ID:
         return  # Only allow command in bot_testing
 
@@ -73,35 +78,41 @@ async def get_links(ctx, channel: discord.TextChannel = None):
                 links_by_domain[domain] = []
             links_by_domain[domain].append(link)
 
+    # Dictionary to hold the final link-to-pdf_url mapping for JSON output
+    link_pdf_map = {}
+
     # If links were found, display them in an embed
     if links_by_domain:
-        # for domain, links in links_by_domain.items():
-        #     # Create an embed with each domain's links
-        #     for i in range(0, len(links), 5):  # Send in batches of 5 to fit Discord's character limit
-        #         embed = discord.Embed(
-        #             title=f"Links found in {target_channel.name} - {domain}",
-        #             color=discord.Color.blue()
-        #         )
-        #         batch = links[i:i + 5]  # Create a batch of links
-        #         link_text = "\n".join(batch)
-        #         embed.add_field(name="Links", value=link_text, inline=False)
-        #         await ctx.send(embed=embed)
-        #
-        # Now, let's extract PDF URLs for specific domains (mises.org and library.lol)
         mises_links = []
         library_lol_links = []
+        empty_links = []
 
         for link in links_by_domain.get('mises.org', []):
             pdf_url = await PDFDownloader.get_pdf_url(link)
-            mises_links.append(f"Mises PDF: {pdf_url}")
+            if Utilities.is_empty(pdf_url):
+                empty_links.append(link)
+            else:
+                mises_links.append(f"[Link]({link}) -> [PDF]({pdf_url})")
+                link_pdf_map[link] = pdf_url
 
         for link in links_by_domain.get('library.lol', []):
             pdf_url = await PDFDownloader.get_pdf_url(link)
-            library_lol_links.append(f"Liblol PDF: {pdf_url}")
+            if Utilities.is_empty(pdf_url):
+                empty_links.append(link)
+            else:
+                library_lol_links.append(f"[Link]({link}) -> [PDF]({pdf_url})")
+                link_pdf_map[link] = pdf_url
+
+        # Save the results to a JSON file
+        json_file_path = "link_pdf_map.json"
+        with open(json_file_path, "w", encoding="utf-8") as json_file:
+            json.dump(link_pdf_map, json_file, indent=4)
+
+        await ctx.send(f"Links and PDF URLs have been saved to `{json_file_path}`")
 
         # Send the extracted PDF links for mises.org in batches
         if mises_links:
-            for i in range(0, len(mises_links), 5):  # Batch size of 5
+            for i in range(0, len(mises_links), 5):  # Batch size of 2
                 batch = mises_links[i:i + 5]
                 embed = discord.Embed(
                     title="Extracted PDF Links from mises.org",
@@ -112,8 +123,8 @@ async def get_links(ctx, channel: discord.TextChannel = None):
 
         # Send the extracted PDF links for library.lol in batches
         if library_lol_links:
-            for i in range(0, len(library_lol_links), 1):  # Batch size of 5
-                batch = library_lol_links[i:i + 1]
+            for i in range(0, len(library_lol_links), 2):  # Batch size of 1
+                batch = library_lol_links[i:i + 2]
                 embed = discord.Embed(
                     title="Downloaded PDF Links from library.lol",
                     color=discord.Color.blue()
@@ -121,12 +132,12 @@ async def get_links(ctx, channel: discord.TextChannel = None):
                 embed.add_field(name="Links", value="\n".join(batch), inline=False)
                 await ctx.send(embed=embed)
 
-
         # Send a summary of domains and link counts at the end
         summary_text = "\n".join(f"{domain}: {len(links)} links" for domain, links in links_by_domain.items())
+        empty_links_text = f"Empty Links: \n" + "\n".join(f"{link}" for link in empty_links)
         summary_embed = discord.Embed(
-            title=f"Summary of Links by Domain in {target_channel.name}",
-            description=summary_text,
+            title=f"Summary of Links by Domain in {target_channel.name} \n",
+            description=summary_text + "\n" + empty_links_text,
             color=discord.Color.green()
         )
         await ctx.send(embed=summary_embed)

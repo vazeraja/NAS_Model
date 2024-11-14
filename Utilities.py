@@ -10,6 +10,10 @@ class Utilities:
             print(f"- {item}")
 
     @staticmethod
+    def is_empty(string):
+        return not string or string.strip() == ""
+
+    @staticmethod
     def clean_filename(url_filename: str) -> str:
         # Decode URL-encoded characters
         decoded_filename = urllib.parse.unquote(url_filename)
