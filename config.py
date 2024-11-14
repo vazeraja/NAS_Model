@@ -11,4 +11,5 @@ class Config:
             cls.QDRANT_COLLECTION_NAME = os.getenv("QDRANT_COLLECTION_NAME")
             cls.OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
             cls.DISCORD_API_KEY = os.getenv("DISCORD_API_KEY")
+            cls.BOT_TESTING_CHANNEL_ID = os.getenv("BOT_TESTING_CHANNEL_ID")
         return cls._instance

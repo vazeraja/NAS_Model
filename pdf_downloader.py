@@ -12,7 +12,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import requests
 import discord
 
-from Utilities import Utilities
+from utilities import Utilities
 
 class PDFDownloader:
 

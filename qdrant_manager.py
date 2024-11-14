@@ -1,5 +1,5 @@
 import os
-from Utilities import Utilities
+from utilities import Utilities
 from qdrant_client import QdrantClient, models
 
 
