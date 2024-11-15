@@ -2,6 +2,7 @@ import asyncio
 import urllib.parse
 import re
 
+
 class Utilities:
 
     @staticmethod
@@ -28,6 +29,18 @@ class Utilities:
         cleaned_filename = cleaned_filename.title().strip()
 
         return cleaned_filename
+
+    @staticmethod
+    async def get_link_map():
+        import os
+        import json
+
+        channel_map = {}
+        json_file_path = "link_pdf_map.json"
+        if os.path.exists(json_file_path):
+            with open(json_file_path, "r", encoding="utf-8") as json_file:
+                channel_map = json.load(json_file)
+        return channel_map
 
     @staticmethod
     async def confirm_and_run(func, prompt, *args, **kwargs):

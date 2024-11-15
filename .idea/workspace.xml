@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0bf51b79-1cae-4f19-90b0-9fb2cef74b49" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/commands.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscordManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/DiscordManager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EmbeddingModelCreator.py" beforeDir="false" afterPath="$PROJECT_DIR$/embedding_model_creator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PDFDownloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_downloader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QdrantManager.py" beforeDir="false" afterPath="$PROJECT_DIR$/qdrant_manager.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,7 +154,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/NAS_Model$main.coverage" NAME="main Coverage Results" MODIFIED="1731596658723" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NAS_Model$main.coverage" NAME="main Coverage Results" MODIFIED="1731642143100" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NAS_Model$DiscordManager.coverage" NAME="DiscordManager Coverage Results" MODIFIED="1731595819789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
