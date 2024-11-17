@@ -1,18 +1,6 @@
-import os
-import time
 from bs4 import BeautifulSoup
-from selenium import webdriver
-from selenium.webdriver.common.by import By
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.chrome.service import Service
-from webdriver_manager.chrome import ChromeDriverManager
-from selenium.webdriver.chrome.options import Options
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.support import expected_conditions as EC
 import requests
-import discord
 
-from utilities import Utilities
 
 class PDFDownloader:
 
@@ -39,5 +27,6 @@ class PDFDownloader:
                     else:
                         return url + href  # Relative URL (adjust as needed)
         else:
-            print(f"Error: Unable to fetch the webpage. Status code: {response.status_code}")
+            print(f"Error: Unable to fetch the webpage. Status code: {response.status_code} \n"
+                  f"Webpage URL: {url}")
             return None
