@@ -1,16 +1,12 @@
 import asyncio
 from dotenv import load_dotenv
 
-import discord
-from discord.ext import commands
-
-from langchain_openai import ChatOpenAI
-from langchain.chains import create_retrieval_chain
-from langchain.chains.combine_documents import create_stuff_documents_chain
-from langchain_core.prompts import ChatPromptTemplate
 from langchain_qdrant import QdrantVectorStore
 
-from embedding_model_creator import EmbeddingManager
+import discord
+from discord.ext import commands as discord_commands
+from commands import Commands
+from embedding_data import EmbeddingData
 from qdrant_manager import QdrantManager
 from config import Config
 from utilities import Utilities
@@ -23,20 +19,26 @@ intents.messages = True  # Allows the bot to read messages
 intents.message_content = True  # Required to access message content in recent versions
 
 # Initialize the bot with command prefix and intents
-bot = discord.ext.commands.Bot(command_prefix="!", intents=intents)
+bot = discord_commands.Bot(command_prefix="!", intents=intents)
+
+BOT_TESTING_CHANNEL_ID = 1299034004472860703
+USER_ID = 1113335861623402567
+
+config = Config()
+embedding_data = EmbeddingData(config, "sentence-transformers/all-mpnet-base-v2")
+
 
 @bot.event
 async def on_ready():
     print(f"Logged in as {bot.user}")
+    await QdrantManager.initialize_qdrant(bot, BOT_TESTING_CHANNEL_ID, USER_ID, config, embedding_data)
+
+    await bot.get_channel(BOT_TESTING_CHANNEL_ID).send(f"Qdrant Initialized {config.COLLECTIONS_INITIALIZED}")
+
 
 async def main():
-    config = Config()
-    client = QdrantManager.client
-    embedding_manager = EmbeddingManager("sentence-transformers/all-mpnet-base-v2")
-
-
     try:
-        await bot.load_extension("commands")
+        await bot.add_cog(Commands(bot, config, embedding_data))
         await bot.start(config.DISCORD_API_KEY)
     except (asyncio.CancelledError, KeyboardInterrupt):
         print("Bot is shutting down...")
@@ -44,12 +46,10 @@ async def main():
         await bot.close()
 
     # # Try to initialize Qdrant and proceed with setup if successful
-    # if not await QdrantManager.initialize_qdrant():
-    #     print("Failed to initialize Qdrant")
-    #     return
+
     #
     # # Everything inside here runs only if Qdrant initialization is successful
-    # print("Qdrant initialized successfully")
+
     #
     # embedding_model_creator = EmbeddingModelCreator("sentence-transformers/all-mpnet-base-v2")
     # embed_dim = embedding_model_creator.embed_dim()
@@ -90,56 +90,8 @@ async def main():
     # print(response["answer"])
 
 
-
-async def embed_documents(vector_store):
-    import os
-    from langchain.text_splitter import CharacterTextSplitter
-    from langchain_community.document_loaders import PyPDFLoader
-
-    current_dir = os.path.dirname(os.path.abspath(__file__))
-    books_dir = os.path.join(current_dir, "books")
-
-    # List all PDF files in the directory
-    pdf_files = [file for file in os.listdir(books_dir) if file.endswith(".pdf")]
-
-    if not pdf_files:
-        raise FileNotFoundError("No PDF files found in the 'books' directory.")
-
-    text_splitter = CharacterTextSplitter(
-        separator="\n",
-        chunk_size=1000,
-        chunk_overlap=300,
-        length_function=len
-    )
-
-    all_chunks = []
-    for pdf_file in pdf_files:
-        file_path = os.path.join(books_dir, pdf_file)
-        loader = PyPDFLoader(file_path)
-        documents = loader.load()
-
-        # Split document into chunks
-        chunked_docs = text_splitter.split_documents(documents)
-
-        # Add metadata to each chunk
-        for chunk in chunked_docs:
-            chunk.metadata = {
-                "source": pdf_file,  # Include the filename as a metadata attribute
-            }
-
-        # Add the chunks to the vector store
-        vector_store.add_documents(chunked_docs)
-        all_chunks.extend(chunked_docs)
-
-        print(f"Processed {pdf_file}: {len(chunked_docs)} chunks")
-
-    print("\n--- Document Chunks Information ---")
-    print(f"Total number of chunks: {len(all_chunks)}")
-    print(f"Sample chunk from {all_chunks[0].metadata['source']}:\n{all_chunks[0].text}\n")
-
 if __name__ == "__main__":
     try:
         asyncio.run(main())
     except KeyboardInterrupt:
         print("Program interrupted by user.")
-

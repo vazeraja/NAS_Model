@@ -4,12 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bf51b79-1cae-4f19-90b0-9fb2cef74b49" name="Changes" comment="add discord cog">
+    <list default="true" id="0bf51b79-1cae-4f19-90b0-9fb2cef74b49" name="Changes" comment="create json file with channel info">
+      <change afterPath="$PROJECT_DIR$/chat.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/llm_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DiscordManager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/channel_map.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cache_debug.log" beforeDir="false" afterPath="$PROJECT_DIR$/cache_debug.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/commands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_downloader.py" beforeDir="false" afterPath="$PROJECT_DIR$/pdf_downloader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/qdrant_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/qdrant_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/utilities.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +161,23 @@
       <option name="project" value="LOCAL" />
       <updated>1731644011455</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="create json file with channel info">
+      <option name="closed" value="true" />
+      <created>1731806031841</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1731806031841</updated>
+    </task>
+    <task id="LOCAL-00003" summary="create json file with channel info">
+      <option name="closed" value="true" />
+      <created>1731806042806</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1731806042806</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -167,10 +185,11 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add discord cog" />
-    <option name="LAST_COMMIT_MESSAGE" value="add discord cog" />
+    <MESSAGE value="create json file with channel info" />
+    <option name="LAST_COMMIT_MESSAGE" value="create json file with channel info" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/NAS_Model$main.coverage" NAME="main Coverage Results" MODIFIED="1731795407715" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/NAS_Model$main.coverage" NAME="main Coverage Results" MODIFIED="1731887755395" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/NAS_Model$DiscordManager.coverage" NAME="DiscordManager Coverage Results" MODIFIED="1731595819789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

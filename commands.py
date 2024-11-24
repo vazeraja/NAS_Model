@@ -1,38 +1,50 @@
 import discord
 from discord.ext import commands
 
-from config import Config
 from utilities import Utilities
+from pdf_downloader import PDFDownloader
+from ai_manager import AIManager
 
 import json
 import re
 import logging
-import aiohttp
-from bs4 import BeautifulSoup
-from pdf_downloader import PDFDownloader
 
-config = Config()
-logging.basicConfig(level=logging.INFO, filename="cache_debug.log", filemode="w", format="%(asctime)s - %(levelname)s - %(message)s")
+logging.basicConfig(level=logging.INFO, filename="cache_debug.log", filemode="w",
+                    format="%(asctime)s - %(levelname)s - %(message)s")
 
 class Commands(commands.Cog):
-    def __init__(self, bot):
+    def __init__(self, bot, config, embedding_data):
         self.bot = bot
-        self.config = Config()
+        self.config = config
+        self.embedding_data = embedding_data
 
     @commands.command(name="example")
     async def example_command(self, ctx):
         await ctx.send("this is an example command")
 
-    # @commands.command(name="check")
-    # async def update_channel_command(self, ctx, channel: discord.TextChannel = None):
-    #     previous_channel_map = await Utilities.get_channel_map()
-    #     current_channel_map = await Utilities.cache_channel_data(channel)
-    #
-    #     previous_channel_dict = previous_channel_map.get(channel.name, {})
-    #     current_channel_dict = current_channel_map.get(channel.name, {})
-    #
-    #     report = await Utilities.compare_dicts(previous_channel_dict, current_channel_dict)
-    #     await ctx.send(report)
+    @commands.command(name="chat")
+    async def ask_command(self, ctx):
+        if not self.config.COLLECTIONS_INITIALIZED:
+            return
+
+        response = await Utilities.wait_for_user_response(ctx)
+
+        if response is not None:
+            ai_response = await AIManager.ask_bot(response, self.embedding_data.vector_store(), self.config)
+            await ctx.send(ai_response)
+        else:
+            await ctx.send("No response received.")
+
+    @commands.command(name="check")
+    async def update_channel_command(self, ctx, channel: discord.TextChannel = None):
+        previous_channel_map = await Utilities.get_channel_map()
+        current_channel_map = await self.cache_command(ctx, channel)
+
+        previous_channel_dict = previous_channel_map.get(channel.name, {})
+        current_channel_dict = current_channel_map.get(channel.name, {})
+
+        report = await Utilities.compare_dicts(previous_channel_dict, current_channel_dict)
+        await ctx.send(report)
 
     @commands.command(name="report")
     async def report_command(self, ctx, channel: discord.TextChannel = None):
@@ -116,6 +128,4 @@ class Commands(commands.Cog):
         await progress_message.edit(content="Caching completed! Links and PDF URLs have been saved.")
         logging.info("Caching process completed.")
 
-
-async def setup(bot):
-    await bot.add_cog(Commands(bot))
+        return channel_map
