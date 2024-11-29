@@ -13,11 +13,14 @@ class Config:
                 cls.QDRANT_HOST = cls._get_env("QDRANT_HOST")
                 cls.QDRANT_API_KEY = cls._get_env("QDRANT_API_KEY")
                 cls.QDRANT_COLLECTION_NAME = cls._get_env("QDRANT_COLLECTION_NAME")
+
                 cls.OPENAI_API_KEY = cls._get_env("OPENAI_API_KEY")
+                cls.gpt_4o_mini = cls._get_env("GPT_4O_MINI")
+
                 cls.DISCORD_API_KEY = cls._get_env("DISCORD_API_KEY")
                 cls.BOT_TESTING_CHANNEL_ID = cls._get_env("BOT_TESTING_CHANNEL_ID")
+                cls.USER_ID = cls._get_env("USER_ID")
 
-                cls.COLLECTIONS_INITIALIZED = False
         return cls._instance
 
     @staticmethod

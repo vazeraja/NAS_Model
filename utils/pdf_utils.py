@@ -1,8 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 
-
-class PDFDownloader:
+class PDFUtils:
 
     @staticmethod
     async def get_pdf_url(url: str):

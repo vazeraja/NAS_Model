@@ -1,22 +1,23 @@
 import discord
 from discord.ext import commands
 
-from utilities import Utilities
-from pdf_downloader import PDFDownloader
-from ai_manager import AIManager
+from utils.dict_utils import DictUtils
+from utils.discord_utils import DiscordUtils
+from utils.pdf_utils import PDFUtils
+from services.llm_service import LLMService
 
 import json
 import re
 import logging
 
-logging.basicConfig(level=logging.INFO, filename="cache_debug.log", filemode="w",
+logging.basicConfig(level=logging.INFO, filename="../cache_debug.log", filemode="w",
                     format="%(asctime)s - %(levelname)s - %(message)s")
 
+
 class Commands(commands.Cog):
-    def __init__(self, bot, config, embedding_data):
+    def __init__(self, bot, context):
         self.bot = bot
-        self.config = config
-        self.embedding_data = embedding_data
+        self.context = context
 
     @commands.command(name="example")
     async def example_command(self, ctx):
@@ -24,32 +25,30 @@ class Commands(commands.Cog):
 
     @commands.command(name="chat")
     async def ask_command(self, ctx):
-        if not self.config.COLLECTIONS_INITIALIZED:
-            return
-
-        response = await Utilities.wait_for_user_response(ctx)
+        # Wait for user response
+        response = await DiscordUtils.wait_for_user_response(ctx)
 
         if response is not None:
-            ai_response = await AIManager.ask_bot(response, self.embedding_data.vector_store(), self.config)
+            ai_response = await self.context.chat_manager.handle_query(response)
             await ctx.send(ai_response)
         else:
             await ctx.send("No response received.")
 
     @commands.command(name="check")
     async def update_channel_command(self, ctx, channel: discord.TextChannel = None):
-        previous_channel_map = await Utilities.get_channel_map()
+        previous_channel_map = await DiscordUtils.get_channel_map()
         current_channel_map = await self.cache_command(ctx, channel)
 
         previous_channel_dict = previous_channel_map.get(channel.name, {})
         current_channel_dict = current_channel_map.get(channel.name, {})
 
-        report = await Utilities.compare_dicts(previous_channel_dict, current_channel_dict)
+        report = await DictUtils.compare_dicts(previous_channel_dict, current_channel_dict)
         await ctx.send(report)
 
     @commands.command(name="report")
     async def report_command(self, ctx, channel: discord.TextChannel = None):
-        links_by_domain = await Utilities.get_links_by_domain(channel)
-        null_links = await Utilities.get_null_links(channel)
+        links_by_domain = await DictUtils.get_links_by_domain(channel.name)
+        null_links = await DictUtils.get_null_links(channel.name)
 
         total_links = 0
         for domain in links_by_domain:
@@ -81,7 +80,7 @@ class Commands(commands.Cog):
 
         target_channel = channel or ctx.channel
         url_pattern = r'(https?://[^\s]+)'
-        channel_map = await Utilities.get_channel_map()
+        channel_map = await DiscordUtils.get_channel_map()
 
         progress_message = await ctx.send("Starting caching process...")
         total_messages = 0
@@ -106,7 +105,7 @@ class Commands(commands.Cog):
                         channel_map[channel_name] = {}
 
                     # Retrieve the PDF URL and store it directly in the links_by_channel dictionary
-                    pdf_url = await PDFDownloader.get_pdf_url(link)
+                    pdf_url = await PDFUtils.get_pdf_url(link)
                     channel_map[channel_name][link] = pdf_url
 
             except Exception as e:
