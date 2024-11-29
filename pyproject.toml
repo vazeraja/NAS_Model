@@ -26,6 +26,7 @@ requests = "^2.32.3"
 beautifulsoup4 = "^4.12.3"
 selenium = "^4.26.1"
 webdriver-manager = "^4.0.2"
+bertopic = "^0.16.4"
 
 
 [build-system]
