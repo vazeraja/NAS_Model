@@ -6,16 +6,25 @@ from tempfile import NamedTemporaryFile
 from langchain.text_splitter import CharacterTextSplitter
 from langchain_community.document_loaders import PyPDFLoader
 
+
 class QdrantService:
-    def __init__(self, config, embedding_service):
+    def __init__(self, config, embedding_service, force_recreate_collection = False):
         self.config = config
         self.embedding_service = embedding_service
 
         self.client = QdrantClient(url=self.config.QDRANT_HOST, api_key=self.config.QDRANT_API_KEY)
+        self.vectors_config = VectorParams(size=self.embedding_service.embed_dim(), distance=Distance.COSINE)
+
+        if force_recreate_collection:
+            self.client.delete_collection(self.config.QDRANT_COLLECTION_NAME)
+
+        if not self.client.collection_exists(config.QDRANT_COLLECTION_NAME):
+            self.client.create_collection(config.QDRANT_COLLECTION_NAME, vectors_config=self.vectors_config)
+
         self.vector_store = QdrantVectorStore(
             client=self.client,
             collection_name=self.config.QDRANT_COLLECTION_NAME,
-            embedding=self.embedding_service.model()
+            embedding=self.embedding_service.model(),
         )
 
     @staticmethod

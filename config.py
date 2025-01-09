@@ -2,6 +2,8 @@ import os
 import threading
 
 
+
+
 class Config:
     _instance = None
     _lock = threading.Lock()
@@ -15,6 +17,7 @@ class Config:
                 cls.QDRANT_COLLECTION_NAME = cls._get_env("QDRANT_COLLECTION_NAME")
 
                 cls.OPENAI_API_KEY = cls._get_env("OPENAI_API_KEY")
+                cls.MD_OPENAI_KEY = cls._get_env("MD_OPENAI_KEY")
                 cls.gpt_4o_mini = cls._get_env("GPT_4O_MINI")
 
                 cls.DISCORD_API_KEY = cls._get_env("DISCORD_API_KEY")

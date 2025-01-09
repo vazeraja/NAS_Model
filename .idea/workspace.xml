@@ -4,27 +4,194 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0bf51b79-1cae-4f19-90b0-9fb2cef74b49" name="Changes" comment="create json file with channel info">
-      <change afterPath="$PROJECT_DIR$/application_context.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/services/qdrant_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/document_embedder.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/qdrant_initializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/dict_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/event_manager.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/pdf_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/string_utils.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
+    <list default="true" id="0bf51b79-1cae-4f19-90b0-9fb2cef74b49" name="Changes" comment="new project structure">
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(-) Israel KIRZNER - How Markets Work_ Disequilibrium, Entrepreneurship and Discovery (1997).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Capitalist Thought_ Studies in Philosophy, Politics, and Economics) Mateusz Machaj - Money, Interest, and the Structure of Production_ Resolving Some Puzzles in the Theory of Capital-Lexington Books .pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Capitalist Thought_ Studies in Philosophy, Politics, and Economics) Per L. Bylund - The Seen, the Unseen, and the Unrealized_ How Regulations Affect Our Everyday Lives-Lexington Books (2016).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Economic Theory, Econometrics, and Mathematical Economics Series) Fritz Machlup and Karl Shell (Auth.) - Methodology of Economics and Other Social Sciences-Elsevier Inc, Academic Press (1978).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Foundations of the Market Economy) David A. Harper - Entrepreneurship and the Market Process_ An Enquiry into the Growth of Knowledge (Foundations of the Market Economy)-Routledge (1996).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Historical Perspectives on Modern Economics) Don Lavoie - Rivalry and Central Planning_ The Socialist Calculation Debate Reconsidered (Historical Perspectives on Modern Economics)-Cambridge Universit.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(New Thinking in Political Economy Series) David L. Prychitko - Markets, Planning and Democracy_ Essays After the Collapse of Socialism-Edward Elgar Pub (2002).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(New Thinking in Political Economy) Jesus Huerta de Soto - Socialism, economic calculation and entrepreneurship-Edward Elgar (2010).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Routledge Advances in Heterodox Economics) Per L. Bylund - The Problem of Production_ A new theory of the firm-Routledge (2016).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Routledge Foundations of the Market Economy Ser.) Randall Holcombe - Producing Prosperity _ An Inquiry into the Operation of the Market Process-Taylor &amp; Francis Group (2013).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Routledge Foundations of the Market Economy) Anthony Endres - Neoclassical Microeconomic Theory_ The Founding Austrian Vision -Routledge (1997).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Routledge Foundations of the Market Economy) Esteban F. Thomsen - Prices and Knowledge_ A Market-Process Perspective -Routledge (1992).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Routledge Foundations of the Market Economy) Israel  M Kirzner - The Driving Force of the Market_ Essays in Austrian Economics -Routledge (2000).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Routledge Foundations of the Market Economy) Roger W Garrison - Time and money_ The macroeconomics of capital structure-Routledge (2000).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Routledge Foundations of the Market Economy) William N. Butos, Thomas J. McQuade - Hayekian Systems-Routledge (2023).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Routledge Frontiers of Political Economy) Matthew McCaffrey (Editor) - The Economic Theory of Costs_ Foundations and New Directions-Routledge (2017).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Routledge International Studies in Money and Banking) Peter Lewin, Nicolás Cachanosky - Capital and Finance_ Theory and History-Routledge (2020).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(Routledge foundations of the market economy 33.) O’Driscoll, Gerald P._ Rizzo, Mario J. - Austrian economics re-examined _ the economics of time and ignorance-Routledge (2015).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/(The 2004 Graz Schumpeter Lectures) Richard N. Langlois - The Dynamics of Industrial Capitalism_ Schumpeter, Chandler, and the New Economy-Routledge (2007).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Buchanan J.M.  - Cost and Choice_ An Inquiry in Economic Theory, Vol. 6 (1999).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/David A Harper - Foundations of Entrepreneurship and Economic Development (Foundations of the Market Economy) (2003).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/David Glasner - Free Banking and Monetary Reform-Cambridge University Press (1989).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Don Lavoie - National Economic Planning_ What Is Left_-Cato Inst (1985).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/F. A. Hayek - The Counter Revolution of Science_ Studies on the Abuse of Reason-The Free Press of Glencoe (1979).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/F. A. Hayek - The Sensory Order_ An Inquiry into the Foundations of Theoretical Psychology-University of Chicago Press (2012).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/F. Sautet - Entrepreneurial Theory of the Firm (Foundations of the Market Economy Series) (2000).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/George Selgin - Bank Deregulation and Monetary Order (Routledge International Studies in Money and Banking, 2) (1996).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Holcombe - Entrepreneurship and Economic Progress (Routledge Foundations of the Market Economy) (2006).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Israel Kirzner - Competition and Entrepreneurship-University of Chicago Press (1973).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Israel Kirzner - The Meaning of Market Process_ Essays in the Development of Modern Austrian Economics (Foundations of the Market Economy) (1992).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Israel M. Kirzner (eds.) - Subjectivism, Intelligibility and Economic Understanding_ Essays in Honor of Ludwig M. Lachmann on his Eightieth Birthday-Palgrave Macmillan UK (1986).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Israel M. Kirzner - Discovery and the Capitalist Process-Univ of Chicago Pr (Tx) (1985).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Israel M. Kirzner - Essays on Capital and Interest_ An Austrian Perspective-Edward Elgar Publishing (1996).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Kevin Dowd - Laissez-Faire Banking (Foundations of the Market Economy) (1996).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Kevin Dowd - The Experience of Free Banking (1992).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Lawrence White - Competition and Currency_ Essays on Free Banking and Money-NYU Press (1992).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Leland B. Yeager_ George Selgin (ed., intro.) - The Fluttering Veil_ Essays on Monetary Disequilibrium-Liberty Fund (1997).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Ludwig Lachmann - Expectations and the Meaning of Institutions_ Essays in Economics by Ludwig Lachmann (Foundations of the Market Economy) (1994).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Mario J. Rizzo - Time, Uncertainty, and Disequilibrium_ Exploration of Austrian Themes-Lexington Books (1979).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Mark Skousen - Economic Logic-Regnery Capital (2017).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Mark Skousen - The Structure of Production_ New Revised Edition-New York University Press (2015).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Nicolai J Foss_ Peter G Klein - Organizing entrepreneurial judgment _ a new approach to the firm-Cambridge University Press (2012).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Nicolás Cachanosky - Monetary Equilibrium and Nominal Income Targeting-Routledge (2018).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Peter Lewin and Nicolas Cachanosky - Austrian Capital Theory-Cambridge University Press.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Richard E. Wagner - Mind, Society, and Human Action_ Time and Knowledge in a Theory of Social Economy (Routledge Foundations of the Market Economy)-Routledge (2010).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Roger Koppl - Big Players and the Economic Theory of Expectations (2002).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Roger Koppl, Gary Mongiovi - Subjectivism and Economic Analysis (Routledge Frontiers of Political Economy, 21) (1998).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/Steven Horwitz - Microfoundations and Macroeconomics_ An Austrian Perspective (Foundations of the Market Economy Series) (2000).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/William N. Butos - The Social Science of Hayek's the Sensory Order (Advances in Austrian Economics)-Emerald Group Publishing Limited (2010).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/library_gift/_failed_links.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/01d5c0d7_Socialism An Economic and Sociological Analysis_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/03afda8f_Rehabilitation of Says Law, A_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/04db68b2_rae6_2_5_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/06e043a5_Interest and Prices_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/08aab6f2_Studies in the Theory of International Trade_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/0b6af909_rae5_2_3_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/0eb1e30b_Essay on the Nature and Significance of Economic Science_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/109960a8_man_economy_and_state_with_power_and_market_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/142ad3bf_rae9_1_9_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/17234ceb_The Theory of Prices A Re-Examination of the Central Problems of Monetary Theory, Vol II_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/17609a20_Profits, Interest, and Investment_5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/1d3d5fcb_Freedom Counterfactuals and Economic Laws Further Comments on Machaj and Hulsmann.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/2003ef18_rae7_2_5_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/203fd5bf_Austrian Business Cycle Theory An Introduction.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/2050639f_qjae14_3_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/2336e692_Wages and Capital.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/253e5dba_The Capitalist and the Entrepreneur Essays on Organizations and Markets_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/291e15b6_The Theory of Social Economy_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/2ca86a1b_qjae_23_3-4_bylund_intro.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/30a99224_Prosperity and Depression_5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/322efe9b_Praxeology and Understanding An Analysis of the Controversy in Austrian Economics_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/354bd5b0_The Theory of International Trade_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/36818bd7_rae2_1_1_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/37dc2f1b_Modern Economic Problems_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/4044edb4_Americas Great Depression_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/40f54091_The Bastiat Collection_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/41209b9e_Pure Theory of Capital_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/43658c29_The Principles of Economics, With Applications to Practical Problems_5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/436692a8_principles_of_economics.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/443451ec_qjae5_3_5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/4471ebe5_Recent Literature on Interest.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/460d8b8a_Capitalism A Treatise on Economics_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/4a20c565_17_1_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/4c4ccfc9_Banking and the Business Cycle_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/4c793b2e_qjae10_4_1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/4e987bce_The Common Sense of Political Economy, Volume 1_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/5303a2ef_An Outline of International Price Theory_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/54e32cfe_Theory and History An Interpretation of Social and Economic Evolution_1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/583dd29e_Austrian Macroeconomics A Diagrammatical Exposition_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/5c3b5137_qjae17_2_1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/5d077e73_Theory of Money and Fiduciary Media.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/60f5c8f2_qjae_23_3-4_bylund.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/65b2484d_Market Theory and the Price System_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/65df5d3c_qjae2_4_1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/6e5e175c_Economic Point of View An Essay in the History of Economic Thought_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/6f709997_Mystery of Banking_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/729ee38f_Human Action.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/767bd2c3_12_1_9_0.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/7928e348_qjae7_1_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/7be7c848_qjae1_2_1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/7dd308ff_qjae_22_no_4_winter_2019_0.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/7fd5823e_Social Economics_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/84955bec_Macro-economic thinking and the Market Economy_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/84e8f068_rae9_1_13_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/8adae214_Value, Capital, and Rent_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/8c88046f_Economic Principles_5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/8e84c925_aldwellresponse.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/901806d2_Money, Method, and the Market Process_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/933c9198_Stock Market, Credit, and Capital Formation_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/949d89c4_prices_and_production_and_other_works.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/95ae33d0_Bank Credit A Study of the Principles and Factors Underlying Advances Made by Banks To Borrowers_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/95cb0bb2_rae9_1_7_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/977593a3_qjae3_1_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/99c3742f_The Economics of Sellers' Competition_Machlup.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/9a43baeb_rae10_1_7_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/9ba8c6fc_Economic Science and the Austrian Method_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/9bce59de_rae7_2_6_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/aa256f8f_Calculation and Coordination Essays on Socialism and Transitional Political Economy_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/ab6c0d17_Collectivist Economic Planning_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/b17665d5_The Positive Theory of Capital.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/b3d08a93_Common Sense Economics_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/b8c9b6e7_5_1_4_0.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/b951c528_The Theory of Prices A Re-Examination of the Central Problems of Monetary Theory, Vol I_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/bf42645f_Defense of Extreme Apriorism, In_6.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/c15fafca_1_2_6_0.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/c25f05e9_Capital, Interest, and Rent Essays in the Theory of Distribution_5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/c3891c0d_Interpretations of the Wicksellian Idea_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/c5453332_qjae8_2_1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/c60d8399_Money, Sound and Unsound_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/c6c50cc4_International Monetary Economics_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/c840cac6_rae5_2_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/c845115d_The Austrian Theory of the Trade Cycle and Other Essays_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/ca398e36_Theory of Money and Credit.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/cab07488_economic_calculation_in_the_socialist_commonwealth.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/cdabc824_The Common Sense of Political Economy, Volume 2_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/d10e9120_The Theory of Idle Resources_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/d15f6683_Full Reserve Banking versus the Real Bills Doctrine.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/d1a158d2_Crises and Cycles (1).pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/d56fd20d_rae10_1_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/d5e3219e_Money Bank Credit and Economic Cycles_4thEd.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/d6bc10e1_qjae2_2_6.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/d8427cb0_Capital and Its Structure_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/d8eddf8c_Capital, Expectations, and the Market Process_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/d97e7b67_qjae10_3_1.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/d9d0ce7f_Capital and Production_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/de1a0d54_a_final_word_calculation_know_app_salerno_rev.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/deab0e49_International Trade and the National Income Multiplier_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/dee7e084_Free Banking Theory, History, and a Laissez-Faire Model_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/e0d1b4b3_Risk, Uncertainty, and Profit_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/e2d1a413_Ludwig von Mises as Social Rationalist_0.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/e2daa07d_qjae15_4_14.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/e6c44706_Method, Process, and Austrian Economics Essays in Honor of Ludwig von Mises_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/e7c2b039_Capital and Interest_0.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/ecea6b04_Individualism and Economic Order_4.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/ef541469_qjae1_2_3.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/f0e73ff9_The Great Depression_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/f0fbd8a3_The Pure Time-Preference Theory of Interest_2.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/f48a2de0_qjae2_2_5.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/fad12aba_Economics of the Free Society.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/data/mises_org/ff7469ad_qjae9_4_5_0.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/embedding/document_embedder.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/embedding/mises.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/embedding/temp.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pandoc-3.6.1-windows-x86_64.msi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/app.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/css/styles.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/static/js/scripts.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/templates/base.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ai_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/llm_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cache_debug.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/discord_command_handler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application_context.py" beforeDir="false" afterPath="$PROJECT_DIR$/application_context.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/Alchian_UniversalEconomics1674.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/Alchian_UniversalEconomics1674.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/Knowledge_Reality_and_Value__A_Mostly_Common_Sense_Guide_to_Philosophy_-_Michael_Huemer-1.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/Knowledge_Reality_and_Value__A_Mostly_Common_Sense_Guide_to_Philosophy_-_Michael_Huemer-1.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/PUBLIC_FINANCE_Handbook_of_Public_Finance_2004_Springer.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/PUBLIC_FINANCE_Handbook_of_Public_Finance_2004_Springer.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/Public Goods and Private Communities Full.doc.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/Public Goods and Private Communities Full.doc.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/The_Dependency_of_Wage_Contracts_on_Monetary_Policy.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/The_Dependency_of_Wage_Contracts_on_Monetary_Policy.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/discord/Economic Theory, Econometrics, And Mathematical Economics Series Fritz Machlup And Karl Shell Auth. - Methodology Of Economics And Other Social Sciences-Elsevier Inc, Academic Press 1978.Pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/discord/Economic Theory, Econometrics, And Mathematical Economics Series Fritz Machlup And Karl Shell Auth. - Methodology Of Economics And Other Social Sciences-Elsevier Inc, Academic Press 1978.Pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/installation-and-configuration-guide-exadata-database-machine-dbmin.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/installation-and-configuration-guide-exadata-database-machine-dbmin.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/books/machaj-a-praxeological-case-for-homogeneity-and-indifference.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/data/machaj-a-praxeological-case-for-homogeneity-and-indifference.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/embedding_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/embedding_service.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pdf_downloader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/qdrant_manager.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utilities.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/discord_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/poetry.lock" beforeDir="false" afterPath="$PROJECT_DIR$/poetry.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyproject.toml" beforeDir="false" afterPath="$PROJECT_DIR$/pyproject.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/qdrant_service.py" beforeDir="false" afterPath="$PROJECT_DIR$/services/qdrant_service.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/document_embedder.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/dict_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/dict_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/pdf_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/pdf_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/string_utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/string_utils.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils/utils.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,18 +208,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "vazeraja"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;vazeraja&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/vazeraja/NAS_Model.git",
-    "accountId": "3fa1d96a-b929-4961-a67e-85c1f53c9203"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/vazeraja/NAS_Model.git&quot;,
+    &quot;accountId&quot;: &quot;3fa1d96a-b929-4961-a67e-85c1f53c9203&quot;
   }
-}]]></component>
+}</component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///JetClient Request Console" root0="SKIP_INSPECTION" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 1
@@ -66,18 +236,21 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Python.DiscordManager.executor": "Run",
+    "Python.app.executor": "Run",
     "Python.document_embedder.executor": "Run",
     "Python.main.executor": "Run",
     "Python.qdrant_initializer.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "master",
-    "last_opened_file_path": "D:/Github/NAS_Model/tools/document_embedder.py",
+    "htmx.bundled.context.provider.enabled": "true",
+    "last_opened_file_path": "D:/Github/NAS_Model/web/app.py",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.keymap",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\PyCharm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -92,6 +265,40 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.document_embedder">
+    <configuration name="app" type="PythonConfigurationType" factoryName="Python">
+      <module name="NAS_Model" />
+      <option name="ENV_FILES" value="" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Poetry (NAS_Model)" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <EXTENSION ID="net.ashald.envfile">
+        <option name="IS_ENABLED" value="false" />
+        <option name="IS_SUBST" value="false" />
+        <option name="IS_PATH_MACRO_SUPPORTED" value="false" />
+        <option name="IS_IGNORE_MISSING_FILES" value="false" />
+        <option name="IS_ENABLE_EXPERIMENTAL_INTEGRATIONS" value="false" />
+        <ENTRIES>
+          <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
+        </ENTRIES>
+      </EXTENSION>
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/web/app.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="document_embedder" type="PythonConfigurationType" factoryName="Python">
       <module name="NAS_Model" />
       <option name="ENV_FILES" value="" />
@@ -117,7 +324,7 @@
           <ENTRY IS_ENABLED="true" PARSER="runconfig" IS_EXECUTABLE="false" />
         </ENTRIES>
       </EXTENSION>
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tools/document_embedder.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/embedding/document_embedder.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -195,6 +402,7 @@
     </configuration>
     <list>
       <item itemvalue="Python.document_embedder" />
+      <item itemvalue="Python.app" />
       <item itemvalue="Python.main" />
       <item itemvalue="Python.qdrant_initializer" />
     </list>
@@ -218,7 +426,12 @@
       <workItem from="1730660098706" duration="18319000" />
       <workItem from="1730916829633" duration="75381000" />
       <workItem from="1731593075595" duration="5138000" />
-      <workItem from="1732510684230" duration="39949000" />
+      <workItem from="1732510684230" duration="60257000" />
+      <workItem from="1733182576367" duration="37860000" />
+      <workItem from="1733462201112" duration="1928000" />
+      <workItem from="1734841677502" duration="959000" />
+      <workItem from="1734896287854" duration="4986000" />
+      <workItem from="1736379592115" duration="4355000" />
     </task>
     <task id="LOCAL-00001" summary="add discord cog">
       <option name="closed" value="true" />
@@ -244,21 +457,51 @@
       <option name="project" value="LOCAL" />
       <updated>1731806042806</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="simply chat usage for discord bot">
+      <option name="closed" value="true" />
+      <created>1732843084905</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1732843084906</updated>
+    </task>
+    <task id="LOCAL-00005" summary="simply chat usage for discord bot">
+      <option name="closed" value="true" />
+      <created>1732843100869</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1732843100869</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add discord cog" />
     <MESSAGE value="create json file with channel info" />
-    <option name="LAST_COMMIT_MESSAGE" value="create json file with channel info" />
+    <MESSAGE value="simply chat usage for discord bot" />
+    <MESSAGE value="new project structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="new project structure" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/NAS_Model$main.coverage" NAME="main Coverage Results" MODIFIED="1732683171939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/NAS_Model$document_embedder.coverage" NAME="document_embedder Coverage Results" MODIFIED="1732842539632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/NAS_Model$document_embedder.coverage" NAME="document_embedder Coverage Results" MODIFIED="1736383918485" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/NAS_Model$qdrant_initializer.coverage" NAME="qdrant_initializer Coverage Results" MODIFIED="1732641184001" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/NAS_Model$app.coverage" NAME="app Coverage Results" MODIFIED="1736383506363" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/NAS_Model$DiscordManager.coverage" NAME="DiscordManager Coverage Results" MODIFIED="1731595819789" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

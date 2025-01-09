@@ -1,0 +1,80 @@
+body {
+    background-color: #212121; /* Light gray background */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Optional: clean font style */
+    display: flex; /* Use flexbox to create a side-by-side layout */
+    height: 100vh; /* Make the layout span the full viewport height */
+}
+
+.sidebar {
+    background-color: #171717; /* Dark gray/blue background for the sidebar */
+    color: ghostwhite; /* White text for contrast */
+    width: 220px; /* Sidebar width */
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0); /* Subtle shadow for separation */
+    display: flex; /* Enables flexbox layout */
+    flex-direction: column; /* Aligns items vertically */
+    align-items: center; /* Centers content horizontally */
+    text-align: center; /* Centers text inside items */
+}
+
+.sidebar h2 {
+    font-size: 19px; /* Adjust font size */
+    font-family: 'Arial', sans-serif; /* Choose a font */
+    margin-top: 10px;
+    margin-bottom: 20px; /* Add space below the heading */
+}
+
+.sidebar ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+}
+
+.sidebar li {
+    margin: 10px 0; /* Add spacing between items */
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px; /* Adjust font size for links */
+    font-family: 'Arial', sans-serif; /* Match font */
+}
+
+.content {
+    flex: 1; /* Take up remaining space */
+    padding: 20px;
+}
+
+
+textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+

@@ -13,7 +13,7 @@ from services.qdrant_service import QdrantService
 class ApplicationContext:
     def __init__(self):
         self.config = Config()
-        self.embedding_service = EmbeddingService("sentence-transformers/all-mpnet-base-v2")
+        self.embedding_service = EmbeddingService("BAAI/bge-small-en-v1.5")
         self.qdrant_service = QdrantService(self.config, self.embedding_service)
         self.llm_service = LLMService(self.config, self.qdrant_service.vector_store)
 

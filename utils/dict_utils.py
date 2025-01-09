@@ -1,33 +1,48 @@
 import discord
 import urllib.parse
+from collections import Counter
 from urllib.parse import urlparse
 
 from utils.discord_utils import DiscordUtils
 
 
 class DictUtils:
+
+
     @staticmethod
-    async def compare_dicts(dict1, dict2):
-        # Check for equality
-        if dict1 == dict2:
-            return "The channels are equal."
+    async def get_pdfs_for_domain(domain):
+        channel_map = await DiscordUtils.get_channel_map()
 
-        # Find differing key-value pairs
-        differences = {key: value for key, value in dict1.items() if dict2.get(key) != value}
+        link_urls = []
+        pdf_urls = []
 
-        # Find missing keys in each dictionary
-        missing_in_dict1 = set(dict2.keys()) - set(dict1.keys())
-        missing_in_dict2 = set(dict1.keys()) - set(dict2.keys())
+        for channel, items in channel_map.items():
+            channel_dict = channel_map.get(channel, {})
+            for url, pdf in channel_dict.items():
+                if urlparse(url).netloc == domain:
+                    if domain == 'library.lol':
+                        link_urls.append(url.replace("lol", "gift"))
+                    link_urls.append(url)
+                    pdf_urls.append(pdf)
 
-        result = []
-        if differences:
-            result.append(f"Differences in key-value pairs: {differences}")
-        if missing_in_dict1:
-            result.append(f"Keys missing in dict1: {missing_in_dict1}")
+        return link_urls, pdf_urls
 
-        return result
+    @staticmethod
+    async def extract_and_sort_domains_by_frequency():
+        domain_counter = Counter()
+        data = await DiscordUtils.get_channel_map()
 
+        # Iterate through all branches and their URLs
+        for branch, links in data.items():
+            for url in links.keys():
+                domain = urlparse(url).netloc
+                if domain:
+                    domain_counter[domain] += 1
 
+        # Sort domains by frequency (descending) and then alphabetically
+        sorted_domains = sorted(domain_counter.items(), key=lambda x: (-x[1], x[0]))
+
+        return sorted_domains
 
     @staticmethod
     async def get_null_links(channel_name):

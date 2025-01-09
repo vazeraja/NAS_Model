@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <title>Economics Assistant</title>
+</head>
+<body>
+<div class="sidebar">
+    <h2>Economics Assistant</h2>
+    <ul>
+        <li><a href="#" style="color: white; text-decoration: none;">Home</a></li>
+        <li><a href="#" style="color: white; text-decoration: none;">About</a></li>
+        <li><a href="#" style="color: white; text-decoration: none;">Contact</a></li>
+    </ul>
+</div>
+<div class="content">
+    <label for="output-area"></label>
+    <textarea id="output-area" rows="10" cols="50" readonly></textarea>
+    <!-- Hidden div to handle HTMX updates -->
+    <div id="hidden-output-area" style="display: none;"></div>
+    <form hx-post="/submit" hx-target="#hidden-output-area" hx-swap="beforeend" onsubmit="this.reset(); return false;">
+        <label for="user-input"></label>
+        <input type="text" name="user_input" id="user-input" placeholder="Type your text here..." required>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+<script>
+    document.body.addEventListener("htmx:afterSwap", function (event) {
+        if (event.detail.target.id === "hidden-output-area") {
+            const textarea = document.getElementById("output-area");
+            const hiddenArea = document.getElementById("hidden-output-area");
+            // Append new content from hidden div to textarea
+            textarea.value += hiddenArea.innerText.trim() + "\n";
+            // Clear hidden div content
+            hiddenArea.innerText = "";
+        }
+    });
+</script>
+
+</body>
+</html>

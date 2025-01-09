@@ -1,7 +1,31 @@
+import pypandoc
 from bs4 import BeautifulSoup
 import requests
+import os
 
 class PDFUtils:
+
+    @staticmethod
+    async def epub_to_pdf(input_epub):
+        """
+        Converts an EPUB file to a PDF file using Pandoc. The output PDF is saved in the same directory
+        as the input EPUB file with the same base name.
+
+        :param input_epub: Path to the input EPUB file.
+        """
+        try:
+            pypandoc.download_pandoc()
+
+            # Get the directory and base filename of the input EPUB file
+            base_name = os.path.splitext(os.path.basename(input_epub))[0]  # Remove extension
+            directory = os.path.dirname(input_epub)  # Get directory
+            output_pdf = os.path.join(directory, f"{base_name}.pdf")  # Construct PDF path
+
+            # Convert EPUB to PDF
+            pypandoc.convert_file(input_epub, 'pdf', outputfile=output_pdf, extra_args=['--pdf-engine=xelatex'])
+            print(f"Converted {input_epub} → {output_pdf}")
+        except Exception as e:
+            print(f"Error converting {input_epub} to PDF: {e}")
 
     @staticmethod
     async def get_pdf_url(url: str):
